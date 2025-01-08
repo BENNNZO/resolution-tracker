@@ -19,3 +19,26 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.alert {
+  animation: forwards 3s alertIn ease-out;
+}
+
+@keyframes alertIn {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  15% {
+    top: 0.5rem;
+    opacity: 1;
+  }
+  85% {
+    top: 0.5rem;
+    opacity: 1;
+  }
+  100% {
+    top: -10px;
+    opacity: 0;
+  }
+}
