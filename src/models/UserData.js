@@ -1,76 +1,103 @@
 import mongoose from 'mongoose';
 
-const userSchema = new mongoose.Schema({
+const userDataSchema = new mongoose.Schema({
     sleepDuration: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
-    overallMood: {
+    mood: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
-    cals: {
+    calories: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
     wakeupTime: {
         type: Object,
-        required: true
+        required: true,
+        default: {}
     },
     sleepTime: {
         type: Object,
-        required: true
+        required: true,
+        default: {}
     },
     jerk: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     outside: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     exercise: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     school: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     work: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     game: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     smoke: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     nic: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     alc: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     socialized: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     cleaned: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     cooked: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
+    },
+    notes: {
+        type: String,
+        required: false,
+        default: ""
+    },
+    date: {
+        type: String,
+        required: true,
+        default: ""
     }
 });
 
-const User = mongoose.models.User || mongoose.model('User', userSchema);
+const UserData = mongoose.models.UserData || mongoose.model('UserData', userDataSchema);
 
-export default User;
+export default UserData;
